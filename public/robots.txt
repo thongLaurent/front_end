@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /a
+Allow: /b
+Allow: /posts/*
+Disallow: /
+Disallow: /a/*
+Disallow: /b/*
+Disallow: /posts
