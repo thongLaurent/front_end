@@ -33,8 +33,8 @@ const IndexPage: React.FC<any> = ({ deviceType }) => {
 
       <Modal>
         <Banner
-          intlTitleId={page?.banner_title_id}
-          intlDescriptionId={page?.banner_description_id}
+          intlTitleId={"Get your Groceries with best deals"}
+          intlDescriptionId={"get your Groceries with best deals"}
           imageUrl={page?.banner_image_url}
         />
         <MainContentArea>

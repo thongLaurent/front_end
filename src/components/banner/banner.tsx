@@ -43,14 +43,14 @@ export const Banner: React.FC<Props> = ({
         <Title>
           <FormattedMessage
             id={intlTitleId}
-            defaultMessage="Set Your Title Through Language File"
+            defaultMessage="Get your groceries with best deals"
             values={{ minute: 90 }}
           />
         </Title>
         <Description>
           <FormattedMessage
             id={intlDescriptionId}
-            defaultMessage="Set Your Description Through Language File"
+            defaultMessage="We give your the best deals from different sellers and we maintain your wish list and notify you when the product price is down"
           />
         </Description>
         {/* <SearchWrapper>
