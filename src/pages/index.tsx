@@ -32,6 +32,7 @@ const IndexPage: React.FC<any> = ({ deviceType }) => {
     <>      
 
       <Modal>
+        
         <Banner
           intlTitleId={"Get your Groceries with best deals"}
           intlDescriptionId={"get your Groceries with best deals"}

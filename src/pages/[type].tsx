@@ -58,6 +58,8 @@ const CategoryPage: React.FC<any> = ({ deviceType }) => {
             <Carousel deviceType={deviceType} data={siteOffers} />
           </div>
         </OfferSection> */}
+        <br/>
+        <br/>
         <OfferSection >
        
           <div style={{display: 'flex',flexDirection: 'row'}}>
