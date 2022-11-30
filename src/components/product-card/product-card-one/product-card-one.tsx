@@ -104,6 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         addItem(data);
       }
     }
+    
   };
   const handleRemoveClick = (e) => {
     e.stopPropagation();

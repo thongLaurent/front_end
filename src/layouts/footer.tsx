@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <Box>
       <a href='#' target='_blank'>
-        Femen Life.
+        Offercart
       </a>
     </Box>
   );
