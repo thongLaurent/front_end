@@ -1,4 +1,4 @@
 export const apiCalls = {
-  cartModify: "cart/items/modify",
+  cartModify: "product/addToCart",
   createTransaction: "transaction/confirmOrder",
 };

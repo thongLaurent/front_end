@@ -4,7 +4,7 @@ import axios from "axios";
 // export const API_URL = 'http://127.0.0.1:8080/api/v1';
 // export const API_URL = 'http://52.54.222.16:8080/api/v1';
 
-export const API_URL = 'https://1ea7-52-54-222-16.ngrok.io/api/v1';
+export const API_URL = 'https://941e-52-54-222-16.ngrok.io/api/v1';
 
 
 

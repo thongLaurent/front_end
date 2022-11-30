@@ -35,10 +35,10 @@ export default function SignInModal() {
   const [values, setValues] = useState({
     role: "USER",
     password: "",
-    username: "",
+    email: "",
   });
   const [errorValues, setErrorValues] = useState({
-    username: null,
+    email: null,
     password: null,
   });
   const { rehydrateLocalState } = useCart();
@@ -73,7 +73,7 @@ export default function SignInModal() {
   };
   const validateData = (name, updatedValue) => {
     switch (name) {
-      case "username":
+      case "email":
         if (updatedValue.length === 0) {
           setErrorValues({ ...errorValues, [name]: "Email empty" });
         } else {
@@ -162,8 +162,8 @@ export default function SignInModal() {
             <Input
               type="text"
               placeholder={"Email Address."}
-              value={values.username}
-              name="username"
+              value={values.email}
+              name="email"
               onChange={handleOnChanges}
               onBlur={handleOnChanges}
               onFocus={handleOnFocus}
@@ -171,8 +171,8 @@ export default function SignInModal() {
               backgroundColor="#F7F7F7"
               mb="10px"
             />
-            {errorValues.username ? (
-              <ErrorSpan>{errorValues.username}</ErrorSpan>
+            {errorValues.email ? (
+              <ErrorSpan>{errorValues.email}</ErrorSpan>
             ) : null}
           </div>
           <div
