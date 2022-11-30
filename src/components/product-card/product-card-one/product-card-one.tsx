@@ -104,7 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         addItem(data);
       }
     }
-    
+
   };
   const handleRemoveClick = (e) => {
     e.stopPropagation();
@@ -171,7 +171,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
       <ProductInfo>
         <h3 className="product-title">{title}</h3>
-        <span className="product-weight">{weight}</span>
+        <span className="product-weight">{data.seller.sellerName}</span>
         <div className="product-meta">
           <div className="productPriceWrapper">
             {discountInPercent ? (
