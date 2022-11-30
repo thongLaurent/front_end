@@ -18,7 +18,7 @@ import {
 import { Facebook } from "assets/icons/Facebook";
 import { Google } from "assets/icons/Google";
 import { AuthContext } from "contexts/auth/auth.context";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import { closeModal } from "@redq/reuse-modal";
 import { Input } from "components/forms/input";
 import { validateEmail } from "utils/util-functions";
@@ -26,7 +26,7 @@ import { Auth } from "services/auth";
 import { ProfileContext } from "contexts/profile/profile.context";
 import { useCart } from "./../../contexts/cart/use-cart";
 export default function SignInModal() {
-  const intl = useIntl();
+  // const intl = useIntl();
   const { authDispatch } = useContext<any>(AuthContext);
   const { fetchData } = useContext(ProfileContext);
   const [isFormValid, setIsFormValid] = useState(false);
@@ -161,10 +161,7 @@ export default function SignInModal() {
           >
             <Input
               type="text"
-              placeholder={intl.formatMessage({
-                id: "emailAddressPlaceholder",
-                defaultMessage: "Email Address.",
-              })}
+              placeholder={"Email Address."}
               value={values.username}
               name="username"
               onChange={handleOnChanges}
@@ -185,10 +182,7 @@ export default function SignInModal() {
           >
             <Input
               type="password"
-              placeholder={intl.formatMessage({
-                id: "passwordPlaceholder",
-                defaultMessage: "Password (min 6 characters)",
-              })}
+              placeholder={"Password (min 6 characters)"}
               value={values.password}
               onChange={handleOnChanges}
               onBlur={handleOnChanges}

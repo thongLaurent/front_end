@@ -22,12 +22,12 @@ import {
 import { Facebook } from 'assets/icons/Facebook';
 import { Google } from 'assets/icons/Google';
 import { AuthContext } from 'contexts/auth/auth.context';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { Auth } from 'services/auth';
 import { validateEmail } from 'utils/util-functions';
 
 export default function SignOutModal() {
-  const intl = useIntl();
+  
   const { authDispatch } = useContext<any>(AuthContext);
 
   const [ isReferralVerfied , setReferralVerfied] = useState(false);
@@ -245,10 +245,7 @@ export default function SignOutModal() {
           }}><MainError>{registrationError}</MainError></div>: null }
         <Input
           type='text'
-          placeholder={intl.formatMessage({
-            id: 'firstNamePlaceholder',
-            defaultMessage: 'First name',
-          })}
+          placeholder={'First name'}
           height='48px'
           backgroundColor='#F7F7F7'
           mb='10px'
@@ -263,10 +260,7 @@ export default function SignOutModal() {
         }}>
           <Input
             type='text'
-            placeholder={intl.formatMessage({
-              id: 'lastNamePlaceholder',
-              defaultMessage: 'Last name',
-            })}
+            placeholder={'Last name'}
             height='48px'
             backgroundColor='#F7F7F7'
             mb='10px'
@@ -277,10 +271,7 @@ export default function SignOutModal() {
           {errorValues.lastName ? <ErrorSpan>{errorValues.lastName}</ErrorSpan> : null}
           <Input
             type='text'
-            placeholder={intl.formatMessage({
-              id: 'emailAddressPlaceholder',
-              defaultMessage: 'Email Address or Contact No.',
-            })}
+            placeholder={ "Email Address or Contact No."}
             height='48px'
             backgroundColor='#F7F7F7'
             mb='10px'
@@ -295,10 +286,7 @@ export default function SignOutModal() {
         }}>
           <Input
             type='password'
-            placeholder={intl.formatMessage({
-              id: 'passwordPlaceholder',
-              defaultMessage: 'Password (min 6 characters)',
-            })}
+            placeholder={"Password (min 6 characters)"}
             height='48px'
             backgroundColor='#F7F7F7'
             mb='10px'
@@ -309,39 +297,7 @@ export default function SignOutModal() {
           {errorValues.password ? <ErrorSpan>{errorValues.password}</ErrorSpan> : null}
          
           </div>
-          <div style={{
-            position: `relative`
-          }}>
-         <Input
-          type='text'
-          placeholder={intl.formatMessage({
-            id: 'referralCodePlaceholder',
-            defaultMessage: 'Referral Code',
-          })}
-          height='48px'
-          backgroundColor='#F7F7F7'
-          mb='10px'
-          onChange={handleInputChange} onFocus={handleOnFocus} onBlur={handleInputChange}
-          value={values.referralCode}
-          name='referralCode'
-        />
-        { 
-          isReferralVerfied && isReferralIdFound ? null: <Button variant='primary' style={{
-              position: `absolute`,
-              top: `5px`,
-              right: `5px`
-          }}  type="button" onClick={verifyReferralCode}>
-            <FormattedMessage id={buttonValues.verifyReferral} defaultMessage={buttonValues.verifyReferral} />
-          </Button>
-        } 
-        </div>
-        <div>
-        {errorValues.referralCode ? <ErrorReferralSpan>{errorValues.referralCode}</ErrorReferralSpan> : null}
-        {
-          isReferralVerfied ?  isReferralIdFound ? 
-          <ReferralSuccessSpan>Referred by {referredByName}.</ReferralSuccessSpan> : <ErrorReferralSpan>{referralError}</ErrorReferralSpan> : null
-        }
-        </div>
+        
         <HelperText style={{ padding: '20px 0 30px' }}>
           <FormattedMessage
             id='signUpText'
